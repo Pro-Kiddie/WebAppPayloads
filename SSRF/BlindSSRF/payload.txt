@@ -1,0 +1,3 @@
+//The site uses analytics software which fetches the URL specified in the Referer header when a product page is loaded. 
+
+Referer: http://mysubdomain.burpcollaborator.net

