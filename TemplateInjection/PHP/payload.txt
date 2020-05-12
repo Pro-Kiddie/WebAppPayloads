@@ -1,0 +1,13 @@
+// Play around with the functions after login
+// Suspicious user.nickname
+// User object
+// Trigger exception when uploading invalid image
+// User.setAvatar() discovered in Stacktrace
+// Try to load sensitive file by setting Avatar to /etc/passwd
+// Load /home/carlos/User.php
+// Discovered User class source code
+// Set Avatar to id_rsa 
+blog-post-author-display=user.setAvatar('/home/carlos/.ssh/id_rsa','image/jpg')
+// Must reload comment page to execute the template to set Avatar
+// Invoke gdprDelete() discovered in User.php to delete Avatar which is now set to id_rsa
+
