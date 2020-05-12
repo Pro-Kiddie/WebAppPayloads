@@ -1,0 +1,4 @@
+// Trigger template engine exception with:
+GET /?message=}}{{ HTTP/1.1
+
+// Identified it is NodeJS Handlebars Template engine

