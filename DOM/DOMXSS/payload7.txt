@@ -1,0 +1,8 @@
+// Site Map to view the javascript file used to sanitized server response before outputting
+	// Found out that uses replace() to HTML encode "<" and ">"
+	// but replace() only replace 1st occurance
+// Site Map to view the JSON response of comments
+// Although website field rendered in <a href=> but server ensures only url that starts with http is accepted
+
+// Payload in comment section:
+<><img src=1 onerror=alert(1)> 

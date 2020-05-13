@@ -1,0 +1,4 @@
+// Need to search DOM for unsafe sinks to identify this open redirection.
+// Page can take in one more GET parameter
+// Payload used:
+https://ac001f221e818d9380ed150c003400f1.web-security-academy.net/post?postId=4&url=https://acaf1f231e768d18807315a601ae00cb.web-security-academy.net/exploit#
