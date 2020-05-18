@@ -1,0 +1,9 @@
+// 1
+https://ac791f801f01cfc68063433f00ee00c0.web-security-academy.net/my-account?id=administrato://ac791f801f01cfc68063433f00ee00c0.web-security-academy.net/my-account?id=administrator
+
+// 2
+Obtain prefilled password - 7w6q73tr2c1kkv3hhejm
+Login as admin
+
+// 3
+Delete carlo

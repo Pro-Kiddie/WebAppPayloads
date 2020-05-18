@@ -1,0 +1,3 @@
+https://ac4a1f3c1e56063b80eb063e009900c3.web-security-academy.net/robots.txt
+
+https://ac4a1f3c1e56063b80eb063e009900c3.web-security-academy.net/administrator-panel

