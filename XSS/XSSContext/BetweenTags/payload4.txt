@@ -1,0 +1,3 @@
+<svg><discard onbegin=alert(1)></svg>
+
+// Bruteforce for allowed tags and events

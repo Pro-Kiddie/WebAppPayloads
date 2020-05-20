@@ -1,0 +1,3 @@
+<svg><a><animate attributeName=href values=javascript:alert(1) /><text x=20 y=20>Click me</text></a> 
+
+// <text> is essential as it is needed to display "Click me" properly in <svg>
