@@ -1,0 +1,1 @@
+<img src="https://your-lab-id/email/change-email?email=kiddie@test.com"

